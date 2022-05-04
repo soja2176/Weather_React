@@ -1,0 +1,17 @@
+.container {
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btnSearch{
+    color: blanchedalmond;
+    background-color: rgb(68, 105, 238);
+    border-radius: 5px;
+    margin-left: 5px;
+    
+}
+.btnSearch:hover{
+    transition: 500ms;
+    background-color: green;
+}
