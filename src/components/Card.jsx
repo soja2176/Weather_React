@@ -14,9 +14,8 @@ export default function Card({max,min,name,img,onClose}) {
      <p className={styles.temp}>{min}</p>
      <p className={styles.text}>Max</p>
      <p className={styles.temp}>{max}</p>
+     <img className={styles.imax} src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt = {"img"}></img>
     </div>
-    <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt = {"img"}></img>
-    
     </div>
   )
 };

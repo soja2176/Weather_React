@@ -1,7 +1,8 @@
 .container {
-    padding-right: 15px;
     display: flex;
     justify-content: flex-end;
+    padding-top: 0.4rem;
+    padding-right: 0.8rem;
 }
 
 .btnSearch{
@@ -9,7 +10,7 @@
     background-color: rgb(68, 105, 238);
     border-radius: 5px;
     margin-left: 5px;
-    
+  
 }
 .btnSearch:hover{
     transition: 500ms;

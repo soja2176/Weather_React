@@ -31,11 +31,12 @@
 .text{
     font-weight: bold;
     font-family: Cinzel;
+    font-size: 20px;
 }
 
 .nameT{
     font-weight: bold;
-    font-size: larger;
+    font-size: 40px;
     font-family: Lemon;
 
 }
@@ -43,4 +44,5 @@
     font-weight: bold;
     color: rgb(255, 213, 0);
     font-family: limelight ;
+    font-size: 20px;
 }
