@@ -10,6 +10,7 @@ export default function Card({max,min,name,img,onClose}) {
       <button className={styles.btnC} onClick={onClose}>X</button>
      <h4 className={styles.nameT}>{name}</h4>
     <div className={styles.info}>
+     {/* <h4 className={styles.text}>Temperatura</h4> */}
      <p className={styles.text}>Min </p>
      <p className={styles.temp}>{min+' º'}</p>
      <p className={styles.text}>Max </p>
