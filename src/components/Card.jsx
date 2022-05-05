@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from '../components/styles/Card.module.css'
+import {Link} from 'react-router-dom'
 
-export default function Card({max,min,name,img,onClose}) {
-  // acá va tu código
-
+export default function Card({max,min,name,img,onClose,id}) {
   return (
    
     <div className={styles.card}>
       <button className={styles.btnC} onClick={onClose}>X</button>
+      <Link to={`/ciudad/${id}`} >
      <h4 className={styles.nameT}>{name}</h4>
+     </Link>
      <h3 className={styles.text}>Temperatura</h3>
     <div className={styles.info}>
      <p className={styles.text}>Min </p>

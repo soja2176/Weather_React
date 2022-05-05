@@ -1,8 +1,6 @@
-.container {
+.SearchBar {
     display: flex;
     justify-content: flex-end;
-    padding-top: 0.4rem;
-    padding-right: 0.8rem;
 }
 
 .btnSearch{

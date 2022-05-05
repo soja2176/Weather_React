@@ -10,13 +10,13 @@ const handleInputChange = (x) => {
   x.preventDefault()
   setCity(x.target.value)
 }
-  return (<div className={styles.container}>
+  return (<div className={styles.SearchBar}>
     <form onSubmit={(e) => {
       e.preventDefault();
       onSearch(city);
       setCity('');
     }}>
-      <input value={city} onChange={(x) => handleInputChange(x)}
+      <input className={styles.input} value={city} onChange={(x) => handleInputChange(x)}
         type="text"
         placeholder="Ciudad..."
       />
