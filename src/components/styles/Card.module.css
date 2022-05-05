@@ -38,11 +38,15 @@
     font-weight: bold;
     font-size: 40px;
     font-family: Lemon;
-
 }
 .temp{
     font-weight: bold;
     color: rgb(255, 213, 0);
     font-family: limelight ;
     font-size: 20px;
+}
+
+.info{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
 }
