@@ -1,5 +1,4 @@
 import React from 'react';
-import sty from '../components/styles/Nav.module.css';
 import styles from '../components/styles/searchBar.module.css'
 import { useState } from 'react';
 
