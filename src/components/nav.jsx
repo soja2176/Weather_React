@@ -4,9 +4,10 @@ import sty from '../components/styles/Nav.module.css';
 
 function Nav({onSearch}) {
     return (
-    <nav className={sty.Navcontainer}>
+    <nav className={sty.Navcontainer}>  
       <SearchBar onSearch={onSearch}/>
       </nav>
+     
     );
   };
   

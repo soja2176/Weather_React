@@ -25,7 +25,13 @@ function Home(){
               latitud: recurso.coord.lat,
               longitud: recurso.coord.lon
             };
-            setCities(oldCities => [...oldCities, ciudad]);
+            setCities((oldCities) => {
+              if (oldCities.some(c => c.name === ciudad.name)){
+                return oldCities;
+              }else{
+                return [...oldCities, ciudad]
+              }
+            });
           } else {
             alert("Ciudad no encontrada");
           }
