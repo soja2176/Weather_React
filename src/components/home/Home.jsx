@@ -10,7 +10,7 @@ export default Home;
 function Home(){
     const [cities, setCities] = useState([]);
     function onSearch(ciudad) {
-      const apiKey = '19c2c297eab5ce4b6ef3750b1b69a2a9'; 
+      const apiKey = process.env.REACT_APP_API_KEY; 
       fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
         .then(r => r.json())
         .then((recurso) => {
