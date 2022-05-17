@@ -1,50 +1,51 @@
 import React, {useState} from 'react'
+import HomeStyle from '../home/Home.module.css'
 import Nav from '../nav'
 import Cards from '../Cards.jsx'
 import About from '../About.jsx'
-import Ciudad from '../Ciudad.jsx'
+import City from '../Ciudad.jsx'
 import {Route} from 'react-router-dom'
 
 export default Home;
 
 function Home(){
     const [cities, setCities] = useState([]);
-    function onSearch(ciudad) {
+    function onSearch(City) {
       const apiKey = process.env.REACT_APP_API_KEY; 
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
+      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}&units=metric`)
         .then(r => r.json())
-        .then((recurso) => {
-          if(recurso.main !== undefined){
-            const ciudad = {
-              min: Math.round(recurso.main.temp_min),
-              max: Math.round(recurso.main.temp_max),
-              img: recurso.weather[0].icon,
-              id: recurso.id,
-              wind: recurso.wind.speed,
-              temp: recurso.main.temp,
-              name: recurso.name,
-              weather: recurso.weather[0].main,
-              clouds: recurso.clouds.all,
-              latitud: recurso.coord.lat,
-              longitud: recurso.coord.lon
+        .then((response) => {
+          if(response.main !== undefined){
+            const City = {
+              min: Math.round(response.main.temp_min),
+              max: Math.round(response.main.temp_max),
+              img: response.weather[0].icon,
+              id: response.id,
+              wind: response.wind.speed,
+              temp: response.main.temp,
+              name: response.name,
+              weather: response.weather[0].main,
+              clouds: response.clouds.all,
+              latitud: response.coord.lat,
+              longitud: response.coord.lon
             };
             setCities((oldCities) => {
-              if (oldCities.some(c => c.name === ciudad.name)){
+              if (oldCities.some(c => c.name === City.name)){
                 return oldCities;
               }else{
-                return [...oldCities, ciudad]
+                return [...oldCities, City]
               }
             });
           } else {
-            alert("Ciudad no encontrada");
+            alert("City no encontrada");
           }
         });
   
       }
-    //   function onFilter(ciudadId) {
-    //     let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
-    //     if(ciudad.length > 0) {
-    //         return ciudad[0];
+    //   function onFilter(CityId) {
+    //     let City = cities.filter(c => c.id === parseInt(CityId));
+    //     if(City.length > 0) {
+    //         return City[0];
     //     } else {
     //         return null;
     //     }
@@ -52,7 +53,7 @@ function Home(){
     function onClose(id) {
       setCities(oldCities => oldCities.filter(c => c.id !== id));
     }
-   return( <div>
+   return( <div className={HomeStyle}>
     <Route path='/'>
     <Nav onSearch={onSearch}/>
     </Route>
@@ -63,9 +64,9 @@ function Home(){
     <Route path='/about' exact>
     <About />
     </Route>
-    <Route path="/ciudad/:ciudadId" exact render={({match}) => {
-      const city = cities.find(c=> c.id === Number(match.params.ciudadId))
-      return <Ciudad city={city} />
+    <Route path="/City/:CityId" exact render={({match}) => {
+      const city = cities.find(c=> c.id === Number(match.params.CityId))
+      return <City city={city} />
     }}>
     </Route>
     </div>
