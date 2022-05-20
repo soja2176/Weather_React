@@ -8,8 +8,9 @@
     width: 290px;
     height: 470px;
     border-radius: 15px;
-    background: linear-gradient(to right, blue, white);
+    background: white;
     box-shadow: 10px 5px 5px black;
+    color: black;
 }
 .btnC{
     border:2px solid rgb(52, 52, 52);
@@ -41,7 +42,7 @@
 }
 .temp{
     font-weight: bold;
-    color: rgb(255, 213, 0);
+    color: rgb(0, 0, 0);
     font-family: limelight ;
     font-size: 20px;
 }

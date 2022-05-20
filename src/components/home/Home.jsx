@@ -37,7 +37,7 @@ function Home(){
               }
             });
           } else {
-            alert("City no encontrada");
+            alert("City not found");
           }
         });
   

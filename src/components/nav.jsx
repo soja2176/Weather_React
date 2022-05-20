@@ -7,11 +7,11 @@ function Nav({onSearch}) {
     return (
     
     <div className={sty.Navcontainer}> 
-    <Link to= '/about'>
-      <span className={sty.About}>About</span>
+    <Link to= '/' className={sty.Home}>
+      <span>Home</span>
     </Link>
-    <Link to = '/'>
-     <span className={sty.About}>Home</span>
+    <Link to = '/about' className={sty.About}>
+     <span>About</span>
     </Link>
     <div className={sty.SearchBar}>
     <SearchBar onSearch={onSearch}/>
