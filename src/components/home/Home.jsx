@@ -3,7 +3,7 @@ import HomeStyle from '../home/Home.module.css'
 import Nav from '../nav'
 import Cards from '../Cards.jsx'
 import About from '../About.jsx'
-import City from '../Ciudad.jsx'
+import Ciudad from '../Ciudad.jsx'
 import {Route} from 'react-router-dom'
 
 export default Home;
@@ -65,8 +65,8 @@ function Home(){
     <About />
     </Route>
     <Route path="/City/:CityId" exact render={({match}) => {
-      const city = cities.find(c=> c.id === Number(match.params.CityId))
-      return <City city={city} />
+      const City = cities.find(c=> c.id === Number(match.params.CityId))
+      return Ciudad({city:City})
     }}>
     </Route>
     </div>

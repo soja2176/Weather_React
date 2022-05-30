@@ -8,8 +8,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-repeat:no-repeat;     
+  background-size: cover;   
+  background-attachment: fixed;
 }
-
+a{
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,17 +23,26 @@ code {
 @media screen and (max-width: 1280px){
   body{
     background-image: url(./img/W1280.jpg);
+    background-repeat:no-repeat;     
+    background-size: cover;   
+    background-attachment: fixed;
   }
 }
 
 @media screen and (max-width: 768px){
   body{
     background-image: url(./img/W768.jpg);
+    background-repeat:no-repeat;     
+    background-size: cover;   
+    background-attachment: fixed;
   }
 
 }
 @media screen and (max-width: 480px){
   body{
     background-image: url(./img/W480.jpg);
+    background-repeat:no-repeat;     
+    background-size: cover;   
+    background-attachment: fixed;
   }
 }
